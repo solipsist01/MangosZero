@@ -28,5 +28,6 @@ RUN \
   chmod +x /install/InstallMangos.sh && \
   chmod +x /install/InstallDatabases.sh && \
   chmod +x /install/InstallWowfiles.sh && \
+  chmod +x /install/UpdateWanIP.sh && \
   chmod +x /etc/cont-init.d/50-prepmangos && \
   chmod +x /etc/cont-init.d/60-prepmangosweb
