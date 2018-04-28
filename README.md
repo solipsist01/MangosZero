@@ -3,11 +3,13 @@
 Unofficial Mangos Zero docker container
 
 contains:
-
+```
 realmd for managing realm
 mangsod world of warcraft emulator
 mariadb for hosting the database
 nginx for mangosweb enhanced v3.04
+```
+
 up and running with 2 simple scripts
 run the container like this.
 
