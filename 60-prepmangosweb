@@ -1,0 +1,25 @@
+#!/usr/bin/with-contenv bash
+
+if [ ! -d /config/mangosweb ]; then
+        cp /var/www/html/mangosweb /config -R
+fi
+
+if [ ! -d /var/www/html/config ]; then
+        ln -s /config/mangosweb /var/www/html/config
+fi
+
+if [ -d /config/mangosweb ]; then
+        chmod 777 /config/mangosweb -R
+fi
+
+if [ -d /var/www/html/core/cache ]; then
+        chmod 777 /var/www/html/core/cache -R
+fi  
+
+if [ ! -f /config/mangosweb/config.php.bak ]; then
+        chmod 777 /var/www/html/install/index.php
+fi
+
+if [ -f /config/mangosweb/config.php.bak ]; then
+        chmod 000 /var/www/html/install/index.php
+fi

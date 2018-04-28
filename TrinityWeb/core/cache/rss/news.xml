@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>MangosWeb v3 RSS News Feed</title>
+        <link>http://127.0.0.1/MangosWebv3/index.php</link>
+        <lastBuildDate>Tue, 02 Nov 2010 19:29:13 -0500</lastBuildDate>
+        <language>en-us</language>
+        <item>
+            <title>Welcome!</title>
+            <pubDate>Tue, 02 Nov 2010 14:58:04 -0500</pubDate>
+            <description>Posted by Wilson212: 
+&lt;p&gt;&lt;strong&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;Thank you for installing MangosWeb v3!&lt;/p&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;Please login with your Admin account username and password to configure the CMS further.&lt;/p&gt;</description>
+        </item>
+    </channel>
+</rss>

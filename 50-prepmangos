@@ -1,0 +1,48 @@
+#!/usr/bin/with-contenv bash
+
+if [ ! -d /mangos/dbc ]; then
+        if [ -d /config/wowfiles/dbc ]; then
+                ln -s /config/wowfiles/dbc /mangos
+        fi
+fi
+
+if [ ! -d /mangos/mmaps ]; then
+        if [ -d /config/wowfiles/mmaps ]; then
+                ln -s /config/wowfiles/mmaps /mangos
+        fi
+fi
+
+if [ ! -d /mangos/vmaps ]; then
+        if [ -d /config/wowfiles/vmaps ]; then
+                ln -s /config/wowfiles/vmaps /mangos
+        fi
+fi
+
+if [ ! -d /mangos/maps ]; then
+        if [ -d /config/wowfiles/maps ]; then
+                ln -s /config/wowfiles/maps /mangos
+        fi
+fi
+
+if [ ! -d /config/mangoslogs ]; then
+        mkdir /config/mangoslogs/
+fi
+
+if [ ! -d /config/realmdlogs ]; then
+        mkdir /config/realmdlogs/
+fi
+
+if [ ! -d /config/wowconfig ]; then
+        mkdir /config/wowconfig/
+fi
+
+if [ ! -f /config/wowconfig/mangosd.conf ]; then
+   cp /scripts/mangosd.conf /config/wowconfig
+fi
+
+if [ ! -f /config/wowconfig/realmd.conf ]; then
+   cp /scripts/realmd.conf /config/wowconfig
+fi
+
+
+
