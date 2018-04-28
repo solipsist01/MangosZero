@@ -7,8 +7,7 @@ RUN \
 RUN \
   rm -rf /var/www/html && \
   git clone https://github.com/mangoszero/database.git /database --recursive -b master && \
-  git clone https://github.com/solipsist01/MangosZero.git /install --recursive -b master && \
-  git clone https://github.com/solipsist01/trinityweb.git /var/www/html --recursive -b master
+  git clone https://github.com/solipsist01/MangosZero.git /install --recursive -b master
   
 COPY --from=solipsist01/mangosbuild /mangos /mangos
 
@@ -18,6 +17,7 @@ RUN \
   mkdir /etc/services.d/nginx && \
   mkdir /etc/services.d/php7.0-fpm && \
   mkdir /run/php && \
+  cp /install/TrinityWeb/* /var/www/html -R && \
   cp /install/servicemangosd /etc/services.d/mangosd/run && \
   cp /install/servicerealmd /etc/services.d/realmd/run && \
   cp /install/servicenginx /etc/services.d/nginx/run && \
@@ -30,4 +30,5 @@ RUN \
   chmod +x /install/InstallWowfiles.sh && \
   chmod +x /install/UpdateWanIP.sh && \
   chmod +x /etc/cont-init.d/50-prepmangos && \
-  chmod +x /etc/cont-init.d/60-prepmangosweb
+  chmod +x /etc/cont-init.d/60-prepmangosweb && \
+  rm -rf /install/TrinityWeb
