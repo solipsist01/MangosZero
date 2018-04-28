@@ -11,6 +11,7 @@ nginx for mangosweb enhanced v3.04
 up and running with 2 simple scripts
 run the container like this.
 
+```
 docker run \
 --name=vanilla \
 -d \
@@ -26,7 +27,7 @@ docker run \
 -v /your/location/config:/config \
 --restart always \
 solipsist01/mangoszero
-
+```
 when it's running type the following in your prompt
 
 docker exec -it vanilla /bin/bash
@@ -62,7 +63,7 @@ remove the docker container with:
 docker rm vanilla -f
 
 now re-run it with:
-
+```
 docker run \
 --name=vanilla \
 -d \
@@ -77,9 +78,10 @@ docker run \
 -v /your/location/config:/config \
 --restart always \
 solipsist01/mangoszero
-
+```
 Parameter breakdown:
 
+```
 docker run \
 --name=vanilla \ #you can chose your own name here
 -d \ #run as daemon
@@ -95,3 +97,4 @@ docker run \
 -v /your/location/config:/config \ #location where config files are stored
 --restart always \ #automatically start when docker host restarts
 solipsist01/mangoszero
+```
