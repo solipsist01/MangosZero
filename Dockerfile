@@ -2,7 +2,7 @@ FROM linuxserver/mariadb:latest
 
 RUN \
   apt-get --assume-yes update && apt-get --assume-yes upgrade && \
-  apt-get --assume-yes install git-core nginx php7.0-fpm php7.0-xml php7.0-mysqli php7.0-gd libace-dev
+  apt-get --assume-yes install git-core nginx php7.2-fpm php7.2-xml php7.2-mysqli php7.2-gd libace-dev
 
 RUN \
   rm -rf /var/www/html && \
