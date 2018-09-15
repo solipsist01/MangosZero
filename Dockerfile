@@ -1,4 +1,4 @@
-FROM linuxserver/mariadb:130
+FROM linuxserver/mariadb:134
 
 RUN \
   apt-get --assume-yes update && apt-get --assume-yes upgrade && \
