@@ -1,8 +1,5 @@
 # MangosZero
 
-CURRENTLY HAS ISSUES DUE TO SOME LIBSSL STUFF.
-WILL FIX THIS
-
 Unofficial Mangos Zero docker container
 
 contains:
