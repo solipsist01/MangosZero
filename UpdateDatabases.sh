@@ -99,9 +99,9 @@ loadCharDB()
 updateCharDB()
 {
 	printf "Updating data into the character database ${cdb}\n"
-	for file in $(ls /database/Character/Updates/*.sql | tr ' ' '|' | tr '\n' ' ')
+	for file in $(find /database/Character/Updates -type f -name "*.sql")
 	do
-		file=$(echo ${file} | tr '|' ' ')
+		file=$(echo ${file})
 		printf "Applying update ${file}\n"
 		mysql -u $user -p$pass -q -s ${cdb} < ${file}
 	done
@@ -140,14 +140,16 @@ populateWorldDB()
 
 updateWorldDB()
 {
-	printf "Updating data into the World database ${wdb}\n"
-	for file in $(ls /database/World/Updates/*.sql | tr ' ' '|' | tr '\n' ' ')
-	do
-		file=$(echo ${file} | tr '|' ' ')
-		printf "Applying update ${file}\n"
-		mysql -u $user -p$pass -q -s ${wdb} < ${file}
-	done
+        printf "Updating data into the World database ${wdb}\n"
+
+        for file in $(find /database/World/Updates -type f -name "*.sql")
+        do
+                file=$(echo ${file})
+                printf "Applying update ${file}\n"
+                mysql -u $user -p$pass -q -s ${wdb} < ${file}
+        done
 }
+
 
 createRealmDB()
 {
@@ -167,9 +169,9 @@ loadRealmDB()
 updateRealmDB()
 {
 	printf "Updating data into the Realm database ${rdb}\n"
-	for file in $(ls /database/Realm/Updates/*.sql | tr ' ' '|' | tr '\n' ' ')
+	for file in $(find /database/Realm/Updates -type f -name "*.sql")
 	do
-		file=$(echo ${file} | tr '|' ' ')
+		file=$(echo ${file})
 		printf "Applying update ${file}\n"
 		mysql -u $user -p$pass -q -s ${wdb} < ${file}
 	done
