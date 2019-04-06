@@ -15,7 +15,7 @@ RUN \
   mkdir /etc/services.d/mangosd && \
   mkdir /etc/services.d/realmd && \
   mkdir /etc/services.d/nginx && \
-  mkdir /etc/services.d/php7.0-fpm && \
+  mkdir /etc/services.d/php7.2-fpm && \
   mkdir /run/php && \
   mkdir /var/www/html && \
   cp /install/TrinityWeb/* /var/www/html -R && \
