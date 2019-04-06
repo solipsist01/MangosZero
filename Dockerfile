@@ -1,8 +1,8 @@
-FROM linuxserver/mariadb:134
+FROM linuxserver/mariadb
 
 RUN \
   apt-get --assume-yes update && apt-get --assume-yes upgrade && \
-  apt-get --assume-yes install git-core nginx php7.0-fpm php7.0-xml php7.0-mysqli php7.0-gd libace-dev
+  apt-get --assume-yes install git-core nginx php7.2-fpm php7.2-xml php7.2-mysqli php7.2-gd libace-dev
 
 RUN \
   rm -rf /var/www/html && \
@@ -22,7 +22,7 @@ RUN \
   cp /install/servicemangosd /etc/services.d/mangosd/run && \
   cp /install/servicerealmd /etc/services.d/realmd/run && \
   cp /install/servicenginx /etc/services.d/nginx/run && \
-  cp /install/servicephp-fpm /etc/services.d/php7.0-fpm/run && \
+  cp /install/servicephp-fpm /etc/services.d/php7.2-fpm/run && \
   cp /install/50-prepmangos /etc/cont-init.d && \
   cp /install/60-prepmangosweb /etc/cont-init.d && \
   cp /install/nginxdefaultconfig /etc/nginx/sites-enabled/default && \
