@@ -68,7 +68,7 @@ docker exec -it vanilla /mangos/mangosd -c /config/wowconfig/console.conf
 
 This will run a mangos config on another port with console enabled.
 Essentially connecting you to the mangos console.
-The config has configured another port, so you can do this while your production mangos is running.
+You can do this while your production mangos is running. 
 
 Now create your GM account (or just elevate your current account)
 
