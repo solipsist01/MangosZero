@@ -58,24 +58,29 @@ this is an automated build, which will automatically build the latest version of
 
 automatic database upgrades on startup is in the works
 
-#Remote Admin
+# Remote Admin
 You need to have a GM level 3 account to access the remote admin port.
 Create one the following way.
 
+```
 docker exec -it vanilla /mangos/mangosd -c /config/wowconfig/console.conf
+```
 
 This will run a mangos config on another port with console enabled.
 Essentially connecting you to the mangos console.
 The config has configured another port, so you can do this while your production mangos is running.
 
 Now create your GM account (or just elevate your current account)
+
+```
 account create gmadmin Y0UB4HDSTR0NGP4SSW0RD
 account set gmlevel gmadmin 3
+```
 
 You can now connect with telnet to port 3443 with your gm account for abuse of GM power ;)
 
 
-optional:
+# Optional
 
 After generating the wowfiles, you don't need to have linked your wow installation client anymore.
 
