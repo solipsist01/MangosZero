@@ -37,14 +37,14 @@ if [ ! -d /config/wowconfig ]; then
 fi
 
 if [ ! -f /config/wowconfig/mangosd.conf ]; then
-   cp /scripts/mangosd.conf /config/wowconfig
+   cp /install/mangosd.conf /config/wowconfig
 fi
 
 if [ ! -f /config/wowconfig/realmd.conf ]; then
-   cp /scripts/realmd.conf /config/wowconfig
+   cp /install/realmd.conf /config/wowconfig
 fi
 
 if [ ! -f /config/wowconfig/console.conf ]; then
-   cp /scripts/console.conf /config/wowconfig
+   cp /install/console.conf /config/wowconfig
 fi
 
