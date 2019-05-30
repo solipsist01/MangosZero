@@ -20,6 +20,7 @@ docker run \
 -p 80:80 \
 -p 8085:8085 \
 -p 3724:3724 \
+-p 3443:3443 \
 -e PUID=0 -e PGID=0 \
 -e WAN_IP_ADDRESS=127.0.0.1 \
 -e DOCKER_HOST_IP=192.168.1.210 \
@@ -57,6 +58,23 @@ this is an automated build, which will automatically build the latest version of
 
 automatic database upgrades on startup is in the works
 
+#Remote Admin
+You need to have a GM level 3 account to access the remote admin port.
+Create one the following way.
+
+docker exec -it vanilla /mangos/mangosd -c /config/wowconfig/console.conf
+
+This will run a mangos config on another port with console enabled.
+Essentially connecting you to the mangos console.
+The config has configured another port, so you can do this while your production mangos is running.
+
+Now create your GM account (or just elevate your current account)
+account create gmadmin Y0UB4HDSTR0NGP4SSW0RD
+account set gmlevel gmadmin 3
+
+You can now connect with telnet to port 3443 with your gm account for abuse of GM power ;)
+
+
 optional:
 
 After generating the wowfiles, you don't need to have linked your wow installation client anymore.
@@ -72,6 +90,7 @@ docker run \
 -p 80:80 \
 -p 8085:8085 \
 -p 3724:3724 \
+-p 3443:3443 \
 -e PUID=0 -e PGID=0 \
 -e WAN_IP_ADDRESS=127.0.0.1 \
 -e DOCKER_HOST_IP=192.168.1.210 \
@@ -90,6 +109,7 @@ docker run \
 -p 80:80 \ #nginx web port
 -p 8085:8085 \ #mangos port
 -p 3724:3724 \ #realmd port
+-p 3443:3443 \ #Remote Admin port (telnet)
 -e PUID=0 -e PGID=0 \ #root
 -e WAN_IP_ADDRESS=127.0.0.1 \ #if you want to port forward for external connection, change to your internet ip address. this address can be updated by running /install/InstallDatabases.sh
 -e DOCKER_HOST_IP=192.168.1.210 \ #ip address of your docker host

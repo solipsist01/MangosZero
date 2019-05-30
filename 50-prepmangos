@@ -44,5 +44,7 @@ if [ ! -f /config/wowconfig/realmd.conf ]; then
    cp /scripts/realmd.conf /config/wowconfig
 fi
 
-
+if [ ! -f /config/wowconfig/console.conf ]; then
+   cp /scripts/console.conf /config/wowconfig
+fi
 
