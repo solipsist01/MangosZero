@@ -32,14 +32,18 @@ docker run \
 solipsist01/mangoszero
 ```
 when it's running type the following in your prompt
-
+```
 docker exec -it vanilla /bin/bash
+```
 Now you will be connected to the docker container.
-
+```
 /install/InstallDatabases.sh
+```
 This will generate the database in the mariadb database
 
+```
 /install/InstallWowfiles.sh
+```
 This will generate the DBC, MAPS, MMAPS, VMAPS.
 They will be moved to your /config directory
 
