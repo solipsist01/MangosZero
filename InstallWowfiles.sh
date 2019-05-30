@@ -32,6 +32,10 @@ if [ ! -f /config/wowconfig/realmd.conf ]; then
    cp /install/realmd.conf /config/wowconfig
 fi
 
+if [ ! -f /config/wowconfig/console.conf ]; then
+   cp /install/console.conf /config/wowconfig
+fi
+
 echo Script Finished
 echo If you want, you can recreate this container without the /wow mapping / world of warcraft installation directory
 echo The needed files are now present in the /config directory.
