@@ -1,10 +1,19 @@
+#!/bin/bash
+
+cores=$(nproc --ignore=1)
+if [ "$cores" == "0" ]; then
+   cores="1"
+fi
+
 cp /mangos/movemap-generator /wow
 cp /mangos/map-extractor /wow
 cp /mangos/vmap-extractor /wow
+
 cd /wow
+
 ./map-extractor
 ./vmap-extractor
-./movemap-generator
+./movemap-generator --threads $cores
 
 echo Moving generated files from /wow to /config/wowfiles
 echo This may take a while.
