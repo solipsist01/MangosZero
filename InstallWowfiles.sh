@@ -1,9 +1,6 @@
 #!/bin/bash
 
 cores=$(nproc --ignore=1)
-if [ "$cores" == "0" ]; then
-   cores="1"
-fi
 
 cp /mangos/movemap-generator /wow
 cp /mangos/map-extractor /wow
