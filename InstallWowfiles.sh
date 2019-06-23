@@ -2,7 +2,7 @@
 
 cores=$(nproc --ignore=1)
 
-cp /mangos/movemap-generator /wow
+cp /mangos/mmap-extractor /wow
 cp /mangos/map-extractor /wow
 cp /mangos/vmap-extractor /wow
 
@@ -10,7 +10,7 @@ cd /wow
 
 ./map-extractor
 ./vmap-extractor
-./movemap-generator --threads $cores
+./mmap-extractor --threads $cores
 
 echo Moving generated files from /wow to /config/wowfiles
 echo This may take a while.
