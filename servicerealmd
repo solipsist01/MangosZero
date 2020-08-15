@@ -1,3 +1,4 @@
 #!/usr/bin/with-contenv bash
 
+cd /mangos
 /mangos/realmd -c /config/wowconfig/realmd.conf

@@ -1,3 +1,4 @@
 #!/usr/bin/with-contenv bash
 
+cd /mangos
 /mangos/mangosd -c /config/wowconfig/mangosd.conf
