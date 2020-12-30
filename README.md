@@ -83,6 +83,13 @@ account set gmlevel gmadmin 3
 
 You can now connect with telnet to port 3443 with your gm account for abuse of GM power ;)
 
+# Additional scripts
+
+```
+UpdateDatabases.sh - This container auto updates. sometimes the database is incompatible since it doesn't autoupdate. run this script to upgrade your databases. make sure you make a backup first
+InstallWorld.sh - Sometimes upgrading doesn't work, or your world db gets corrupted. this scripts builds a new world db.
+UpdateWanIP.sh - Run if your wan IP has changed.
+```
 
 # Optional
 
