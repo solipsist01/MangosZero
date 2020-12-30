@@ -19,21 +19,21 @@ UpdateWorld()
 
 UpdateRealm()
 {
-        printf "Updating data into the Realm database ${wdb}\n"
+        printf "Updating data into the Realm database ${rdb}\n"
         for file in $(find /database/Realm/Updates/ -name '*.sql' -print | grep -v 2015)
         do
                 printf "Applying update ${file}\n"
-                mysql -u $user -p$pass -s ${wdb} < ${file}
+                mysql -u $user -p$pass -s ${rdb} < ${file}
         done
 }
 
 UpdateCharacter()
 {
-        printf "Updating data into the Character database ${wdb}\n"
+        printf "Updating data into the Character database ${cdb}\n"
         for file in $(find /database/Character/Updates/ -name '*.sql' -print)
         do
                 printf "Applying update ${file}\n"
-                mysql -u $user -p$pass -s ${wdb} < ${file}
+                mysql -u $user -p$pass -s ${cdb} < ${file}
         done
 }
 
