@@ -87,8 +87,8 @@ You can now connect with telnet to port 3443 with your gm account for abuse of G
 
 ```
 you can run these inside the container. first run: docker exec -it vanilla bash
-/install/UpdateDatabases.sh - This container auto updates. sometimes the database is incompatible since it doesn't autoupdate. run this script to upgrade your databases. make sure you make a backup first
-/install/InstallWorld.sh - Sometimes upgrading doesn't work, or your world db gets corrupted. this scripts builds a new world db.
+/install/UpdateDatabases.sh - sometimes the database is incompatible only the binaries get updated. not the database. run this script to upgrade your databases. make sure you make a backup first
+/install/InstallWorld.sh - Sometimes after upgrading world, this doesn't get detected, or your world db gets corrupted. this scripts builds a new world db.
 /install/UpdateWanIP.sh - Run if your wan IP has changed.
 ```
 
