@@ -29,7 +29,7 @@ UpdateRealm()
 
 UpdateCharacter()
 {
-        printf "Updating data into the Character database ${cdb}\n"
+        printf "Updating data into the Character database ${db}\n"
         for file in $(find /database/Character/Updates/ -name '*.sql' -print)
         do
                 printf "Applying update ${file}\n"
@@ -43,6 +43,9 @@ UpdateCharacter()
 #we repeat 25 times to make sure all updates are done
 #it will pick the right update each time we try.
 #lazy i know, but it works.
+#if after these updates the container won't start due to not detecting world database being update
+#run /install/InstallWorld.sh to fix it
+#make backups 'n all
 for i in $(seq 1 25) ; do UpdateWorld ; done
 for i in $(seq 1 25) ; do UpdateRealm ; done
 for i in $(seq 1 25) ; do UpdateCharacter ; done
