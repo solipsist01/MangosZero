@@ -1,4 +1,4 @@
-FROM linuxserver/mariadb AS builder
+FROM linuxserver/mariadb:version-110.4.21mariabionic AS builder
 
 USER root
 
@@ -29,7 +29,7 @@ RUN \
   cp /sources/linux/src/realmd/realmd /mangos 
 
 
-FROM linuxserver/mariadb
+FROM linuxserver/mariadb:version-110.4.21mariabionic
 
 RUN \
   apt-get --assume-yes update && apt-get --assume-yes upgrade && \
