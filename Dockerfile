@@ -11,7 +11,7 @@ RUN \
 RUN \
   git clone https://github.com/mangoszero/server.git /sources --recursive -b master && \
   git clone https://github.com/mangoszero/database.git /database --recursive -b master && \
-  git clone https://github.com/solipsist01/MangosZero.git /install --recursive -b master \ 
+  git clone https://github.com/solipsist01/MangosZero.git /install --recursive -b master && \ 
   wget https://github.com/Kitware/CMake/releases/download/v3.22.3/cmake-3.22.3.tar.gz && \
   tar xf cmake-3.22.3.tar.gz && \
   cd cmake-3.22.3 && \
