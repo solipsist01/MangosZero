@@ -6,7 +6,7 @@ RUN \
   apt-get --assume-yes update && apt-get --assume-yes upgrade && \
   apt-get --assume-yes install build-essential gcc g++ automake git-core autoconf make patch \
   libmysql++-dev libtool libssl-dev grep binutils zlibc libc6 libbz2-dev subversion \
-  libboost-all-dev mysql-client-5.6 screen libace-dev 
+  libboost-all-dev mysql-client-5.6 screen libace-dev wget
 
 RUN \
   git clone https://github.com/mangoszero/server.git /sources --recursive -b master && \
