@@ -9,15 +9,15 @@ RUN \
   libboost-all-dev mysql-client-5.6 screen libace-dev wget
 
 RUN \
+  wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null && \
+  echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ bionic main' | tee /etc/apt/sources.list.d/kitware.list >/dev/null && \
+  apt-get update && apt-get -y install cmake
+
+RUN \
   git clone https://github.com/mangoszero/server.git /sources --recursive -b master && \
   git clone https://github.com/mangoszero/database.git /database --recursive -b master && \
-  git clone https://github.com/solipsist01/MangosZero.git /install --recursive -b master && \ 
-  wget https://github.com/Kitware/CMake/releases/download/v3.22.3/cmake-3.22.3.tar.gz && \
-  tar xf cmake-3.22.3.tar.gz && \
-  cd cmake-3.22.3 && \
-  ./configure && \
-  make && \
-  make install
+  git clone https://github.com/solipsist01/MangosZero.git /install --recursive -b master
+
 
 RUN \
   cd "/sources/linux" && \
